@@ -2,7 +2,27 @@
 # PHP语法
 * `$query->num_rows`:获取数据集中某个某个数据的行数
 #### 登录/注册的逻辑
-* 一,登录篇
+* 一、先头准备
+    ```
+    $host = "本机地址";
+    $user = "本地用户名-root";
+    $pwd = "本地密码-root";
+    $database = "目标数据库";
+    $connect = mysqli_connect($host, $user, $pwd, $database);
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    ```
+    如果是注册,很大可能还要再加上:
+    ```
+    $mobile = $_POST["mobile"];
+    $nowTime = date("Y-m-d H:i:s");
+    ```
+    * “热身”句子
+    ```
+    $search = "select * from `users` where `username` = '{$username}'";(必备的SQL搜索语句)
+    $query = mysqli_query($connect, $search);(执行连接和搜索)
+    ```
+* 二、登录篇
 	* 1.判断用户名是否存在
 	* 2.如用户名存在则开始判断其密码是否正确
 		* 2-1.如不存在则登陆失败
@@ -27,8 +47,24 @@ if ($query->num_rows == 0) { //1
     }
 }
 ```
-* 二、注册篇
-
+* 三、注册篇
+	* 1.判断用户名在表内是否存在 
+	* 2.如用户名存在则判断失败
+    ```
+    if ($query->num_rows > 0) {
+        while ($sleACT = mysqli_fetch_array($query)) {
+            if ($sleACT) {
+                echo "<br/>";
+                echo "username is created or used";
+                die();
+            }
+        }
+    } else {
+        $sql = "insert into `users` (`username`, `password`, `sex`, `create_time`, `update_time`) value ('{$username}', '{$password}', 'man', '{$nowTime}', '{$nowTime}')";
+        echo $sql;
+        $query = mysqli_query($connect, $sql);
+    }
+    ```
 
 # MySQL数据库
 
