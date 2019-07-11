@@ -48,21 +48,22 @@ if ($query->num_rows == 0) { //1
 }
 ```
 * 三、注册篇
-	* 1.判断用户名在表内是否存在 
+	* 1.判断用户名在表内是否存在
 	* 2.如用户名存在则判断失败
+	* 3.如注册在表内不存在则注册成功
     ```
-    if ($query->num_rows > 0) {
+    if ($query->num_rows > 0) { //1
         while ($sleACT = mysqli_fetch_array($query)) {
             if ($sleACT) {
                 echo "<br/>";
-                echo "username is created or used";
+                echo "username is created or used";//2
                 die();
             }
         }
     } else {
         $sql = "insert into `users` (`username`, `password`, `sex`, `create_time`, `update_time`) value ('{$username}', '{$password}', 'man', '{$nowTime}', '{$nowTime}')";
         echo $sql;
-        $query = mysqli_query($connect, $sql);
+        $query = mysqli_query($connect, $sql);//3
     }
     ```
 
@@ -159,7 +160,7 @@ if ($query->num_rows == 0) { //1
     ```
     SELECT * FROM `users` LEFT(RIGHT) JOIN `users_info` ON `主表`.`id` = `次表`.`此表的关联id`(位置调换);
     ```
-    
+
     **(“=” 等于
     “>” 大于
     “<” 小于
