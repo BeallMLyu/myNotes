@@ -164,7 +164,99 @@ echo $name;
     * 实参:实际参数调用此函数所传的参数，是一个有类型的变量参数
     * 形参:形式参数只为实参存在，接受函数参数的变量。
 
-##登录/注册的逻辑
+## Php在mySQL中获取数据的方式
+
+### 语法解释
+	    ```
+    $host = "地址";
+    $user = "用户名";
+    $password = "密码";
+    $database = "数据库名";
+    try {
+        $connect = mysqli_connect($host, $user, $password, $database);
+        var_dump(mysqli_connect_errno());
+        var_dump($connect);
+    $sql = "select * from `users` where `id` > 0";
+    $result = mysqli_query($connect, $sql);
+    var_dump($result);
+    echo "<br/>";
+    while ($row = mysqli_fetch_array($result)) {
+        echo $row['id'];
+        echo "<br/>";
+        echo $row['username'];
+        echo "<br/>";
+        echo $row['password'];
+        echo "<br/>";
+        echo $row['sex'];
+        echo "<br/>";
+    }
+    mysqli_close($connect);
+    } catch (ErrorException $e) {
+        echo $e->getMessage();
+    }
+    ```
+    * **例内语法解释↑:**
+    	* Mysqli_connect_Errno(error number) 错误代码
+        * Mysqli_Query 执行
+        * Mysqli_Fetch_array 从结果集中获取数据并将其变成数组,通常配合while使用
+    * **当字符串内需要使用变量时，即用{},也就是花括号括起来,且如果是字符串,还需要单引号引起来↓**
+    ```
+    $sql = "update `users` set `password` = ‘{$pwd}’ where `id` > 0";
+    ```
+    * 与前端结合后的后端资料的交互方式
+        * date(“Y-m-d H:i:s”); 当前时间
+        * Y:year
+        * m:mouth
+        * d:day
+		* **(Y,m,d用"-"接合然后位于左边,H,i,s用":"接合然后位于右边,但两边相距一个空格)**
+        * H:hour
+        * i:minute
+        * s:second
+        * **例子↓**
+
+    ```
+    $host = "127.0.0.1";
+    $user = "root";
+    $password = "root";
+    $database = "mall";
+    $connect = mysqli_connect($host, $user, $password, $database);
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    $mobile = $_POST["mobile"];
+    **//$nowTime = date("Y-m-d H:i:s");//**
+    $sql = "insert into `users` (`username`, `password`, `sex`, `create_time`, `update_time`) value ('{$username}', '{$password}', 'man', '{$nowTime}', '{$nowTime}')";
+    echo $sql;
+    $query = mysqli_query($connect, $sql);
+
+    echo "success";
+    mysqli_close($connect);
+    ```
+* **`die();` 强制结束其程序↓**
+    ```
+    $search = "select * from `users` where `username` = '{$username}'";
+    $query = mysqli_query($connect, $search);
+    if ($query->num_rows > 0) {
+        while ($sleACT = mysqli_fetch_array($query)) {
+            if ($sleACT) {
+                echo "<br/>";
+                echo "username is created or used";
+                die();
+            }
+        }
+    } else {
+        $sql = "insert into `users` (`username`, `password`, `sex`, `create_time`, `update_time`) value ('{$username}', '{$password}', 'man', '{$nowTime}', '{$nowTime}')";
+        echo $sql;
+        $query = mysqli_query($connect, $sql);
+    }
+
+    echo "<br/>";
+    echo "success";
+    mysqli_close($connect);
+    ```
+
+
+### 登录/注册的逻辑
+
 * 一、先头准备
     ```
     $host = "本机地址";
