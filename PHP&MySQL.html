@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>PHP&MySQL.html</title>
+  <meta name="generator" content="Haroopad 0.13.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>div.oembedall-githubrepos{border:1px solid #DDD;border-radius:4px;list-style-type:none;margin:0 0 10px;padding:8px 10px 0;font:13.34px/1.4 helvetica,arial,freesans,clean,sans-serif;width:452px;background-color:#fff}div.oembedall-githubrepos .oembedall-body{background:-moz-linear-gradient(center top,#FAFAFA,#EFEFEF);background:-webkit-gradient(linear,left top,left bottom,from(#FAFAFA),to(#EFEFEF));border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top:1px solid #EEE;margin-left:-10px;margin-top:8px;padding:5px 10px;width:100%}div.oembedall-githubrepos h3{font-size:14px;margin:0;padding-left:18px;white-space:nowrap}div.oembedall-githubrepos p.oembedall-description{color:#444;font-size:12px;margin:0 0 3px}div.oembedall-githubrepos p.oembedall-updated-at{color:#888;font-size:11px;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats{border:none;float:right;font-size:11px;font-weight:700;padding-left:15px;position:relative;z-index:5;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats li{border:none;color:#666;display:inline-block;list-style-type:none;margin:0!important}div.oembedall-githubrepos ul.oembedall-repo-stats li a{background-color:transparent;border:none;color:#666!important;background-position:5px -2px;background-repeat:no-repeat;border-left:1px solid #DDD;display:inline-block;height:21px;line-height:21px;padding:0 5px 0 23px}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a{border-left:medium none;margin-right:-3px}div.oembedall-githubrepos ul.oembedall-repo-stats li a:hover{background:5px -27px no-repeat #4183C4;color:#FFF!important;text-decoration:none}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a:hover{border-bottom-left-radius:3px;border-top-left-radius:3px}ul.oembedall-repo-stats li:last-child a:hover{border-bottom-right-radius:3px;border-top-right-radius:3px}span.oembedall-closehide{background-color:#aaa;border-radius:2px;cursor:pointer;margin-right:3px}div.oembedall-container{margin-top:5px;text-align:left}.oembedall-ljuser{font-weight:700}.oembedall-ljuser img{vertical-align:bottom;border:0;padding-right:1px}.oembedall-stoqembed{border-bottom:1px dotted #999;float:left;overflow:hidden;width:730px;line-height:1;background:#FFF;color:#000;font-family:Arial,Liberation Sans,DejaVu Sans,sans-serif;font-size:80%;text-align:left;margin:0;padding:0}.oembedall-stoqembed a{color:#07C;text-decoration:none;margin:0;padding:0}.oembedall-stoqembed a:hover{text-decoration:underline}.oembedall-stoqembed a:visited{color:#4A6B82}.oembedall-stoqembed h3{font-family:Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;font-size:130%;font-weight:700;margin:0;padding:0}.oembedall-stoqembed .oembedall-reputation-score{color:#444;font-size:120%;font-weight:700;margin-right:2px}.oembedall-stoqembed .oembedall-user-info{height:35px;width:185px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-gravatar32{float:left;height:32px;width:32px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-details{float:left;margin-left:5px;overflow:hidden;white-space:nowrap;width:145px}.oembedall-stoqembed .oembedall-question-hyperlink{font-weight:700}.oembedall-stoqembed .oembedall-stats{background:#EEE;margin:0 0 0 7px;padding:4px 7px 6px;width:58px}.oembedall-stoqembed .oembedall-statscontainer{float:left;margin-right:8px;width:86px}.oembedall-stoqembed .oembedall-votes{color:#555;padding:0 0 7px;text-align:center}.oembedall-stoqembed .oembedall-vote-count-post{font-size:240%;color:#808185;display:block;font-weight:700}.oembedall-stoqembed .oembedall-views{color:#999;padding-top:4px;text-align:center}.oembedall-stoqembed .oembedall-status{margin-top:-3px;padding:4px 0;text-align:center;background:#75845C;color:#FFF}.oembedall-stoqembed .oembedall-status strong{color:#FFF;display:block;font-size:140%}.oembedall-stoqembed .oembedall-summary{float:left;width:635px}.oembedall-stoqembed .oembedall-excerpt{line-height:1.2;margin:0;padding:0 0 5px}.oembedall-stoqembed .oembedall-tags{float:left;line-height:18px}.oembedall-stoqembed .oembedall-tags a:hover{text-decoration:none}.oembedall-stoqembed .oembedall-post-tag{background-color:#E0EAF1;border-bottom:1px solid #3E6D8E;border-right:1px solid #7F9FB6;color:#3E6D8E;font-size:90%;line-height:2.4;margin:2px 2px 2px 0;padding:3px 4px;text-decoration:none;white-space:nowrap}.oembedall-stoqembed .oembedall-post-tag:hover{background-color:#3E6D8E;border-bottom:1px solid #37607D;border-right:1px solid #37607D;color:#E0EAF1}.oembedall-stoqembed .oembedall-fr{float:right}.oembedall-stoqembed .oembedall-statsarrow{background-image:url(http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=3);background-repeat:no-repeat;overflow:hidden;background-position:0 -435px;float:right;height:13px;margin-top:12px;width:7px}.oembedall-facebook1{border:1px solid #1A3C6C;padding:0;font:13.34px/1.4 verdana;width:500px}.oembedall-facebook2{background-color:#627add}.oembedall-facebook2 a{color:#e8e8e8;text-decoration:none}.oembedall-facebookBody{background-color:#fff;vertical-align:top;padding:5px}.oembedall-facebookBody .contents{display:inline-block;width:100%}.oembedall-facebookBody div img{float:left;margin-right:5px}div.oembedall-lanyard{-webkit-box-shadow:none;-webkit-transition-delay:0s;-webkit-transition-duration:.4000000059604645s;-webkit-transition-property:width;-webkit-transition-timing-function:cubic-bezier(0.42,0,.58,1);background-attachment:scroll;background-clip:border-box;background-color:transparent;background-image:none;background-origin:padding-box;border-width:0;box-shadow:none;color:#112644;display:block;float:left;font-family:'Trebuchet MS',Trebuchet,sans-serif;font-size:16px;height:253px;line-height:19px;margin:0;max-width:none;min-height:0;outline:#112644 0;overflow-x:visible;overflow-y:visible;padding:0;position:relative;text-align:left;vertical-align:baseline;width:804px}div.oembedall-lanyard .tagline{font-size:1.5em}div.oembedall-lanyard .wrapper{overflow:hidden;clear:both}div.oembedall-lanyard .split{float:left;display:inline}div.oembedall-lanyard .prominent-place .flag:active,div.oembedall-lanyard .prominent-place .flag:focus,div.oembedall-lanyard .prominent-place .flag:hover,div.oembedall-lanyard .prominent-place .flag:link,div.oembedall-lanyard .prominent-place .flag:visited{float:left;display:block;width:48px;height:48px;position:relative;top:-5px;margin-right:10px}div.oembedall-lanyard .place-context{font-size:.889em}div.oembedall-lanyard .prominent-place .sub-place{display:block}div.oembedall-lanyard .prominent-place{font-size:1.125em;line-height:1.1em;font-weight:400}div.oembedall-lanyard .main-date{color:#8CB4E0;font-weight:700;line-height:1.1}div.oembedall-lanyard .first{width:48.57%;margin:0 0 0 2.857%}.mermaid .label{color:#333}.node circle,.node polygon,.node rect{fill:#cde498;stroke:#13540c;stroke-width:1px}.edgePath .path{stroke:green;stroke-width:1.5px}.cluster rect{fill:#cdffb2;rx:40;stroke:#6eaa49;stroke-width:1px}.cluster text{fill:#333}.actor{stroke:#13540c;fill:#cde498}text.actor{fill:#000;stroke:none}.actor-line{stroke:grey}.messageLine0{stroke-width:1.5;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#333}.messageLine1{stroke-width:1.5;stroke-dasharray:"2 2";stroke:#333}#arrowhead{fill:#333}#crosshead path{fill:#333!important;stroke:#333!important}.messageText{fill:#333;stroke:none}.labelBox{stroke:#326932;fill:#cde498}.labelText,.loopText{fill:#000;stroke:none}.loopLine{stroke-width:2;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#326932}.note{stroke:#6eaa49;fill:#fff5ad}.noteText{fill:#000;stroke:none;font-family:'trebuchet ms',verdana,arial;font-size:14px}.section{stroke:none;opacity:.2}.section0,.section2{fill:#6eaa49}.section1,.section3{fill:#fff;opacity:.2}.sectionTitle0,.sectionTitle1,.sectionTitle2,.sectionTitle3{fill:#333}.sectionTitle{text-anchor:start;font-size:11px;text-height:14px}.grid .tick{stroke:lightgrey;opacity:.3;shape-rendering:crispEdges}.grid path{stroke-width:0}.today{fill:none;stroke:red;stroke-width:2px}.task{stroke-width:2}.taskText{text-anchor:middle;font-size:11px}.taskTextOutsideRight{fill:#000;text-anchor:start;font-size:11px}.taskTextOutsideLeft{fill:#000;text-anchor:end;font-size:11px}.taskText0,.taskText1,.taskText2,.taskText3{fill:#fff}.task0,.task1,.task2,.task3{fill:#487e3a;stroke:#13540c}.taskTextOutside0,.taskTextOutside1,.taskTextOutside2,.taskTextOutside3{fill:#000}.active0,.active1,.active2,.active3{fill:#cde498;stroke:#13540c}.activeText0,.activeText1,.activeText2,.activeText3{fill:#000!important}.done0,.done1,.done2,.done3{stroke:grey;fill:lightgrey;stroke-width:2}.doneText0,.doneText1,.doneText2,.doneText3{fill:#000!important}.crit0,.crit1,.crit2,.crit3{stroke:#f88;fill:red;stroke-width:2}.activeCrit0,.activeCrit1,.activeCrit2,.activeCrit3{stroke:#f88;fill:#cde498;stroke-width:2}.doneCrit0,.doneCrit1,.doneCrit2,.doneCrit3{stroke:#f88;fill:lightgrey;stroke-width:2;cursor:pointer;shape-rendering:crispEdges}.activeCritText0,.activeCritText1,.activeCritText2,.activeCritText3,.doneCritText0,.doneCritText1,.doneCritText2,.doneCritText3{fill:#000!important}.titleText{text-anchor:middle;font-size:18px;fill:#000}text{font-family:'trebuchet ms',verdana,arial;font-size:14px}html{height:100%}body{margin:0!important;padding:5px 20px 26px!important;background-color:#fff;font-family:"Lucida Grande","Segoe UI","Apple SD Gothic Neo","Malgun Gothic","Lucida Sans Unicode",Helvetica,Arial,sans-serif;font-size:.9em;overflow-x:hidden;overflow-y:auto}br,h1,h2,h3,h4,h5,h6{clear:both}hr.page{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x;border:0;height:3px;padding:0}hr.underscore{border-top-style:dashed!important}body >:first-child{margin-top:0!important}img.plugin{box-shadow:0 1px 3px rgba(0,0,0,.1);border-radius:3px}iframe{border:0}figure{-webkit-margin-before:0;-webkit-margin-after:0;-webkit-margin-start:0;-webkit-margin-end:0}kbd{border:1px solid #aaa;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;-moz-box-shadow:1px 2px 2px #ddd;-webkit-box-shadow:1px 2px 2px #ddd;box-shadow:1px 2px 2px #ddd;background-color:#f9f9f9;background-image:-moz-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-o-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-webkit-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:linear-gradient(top,#eee,#f9f9f9,#eee);padding:1px 3px;font-family:inherit;font-size:.85em}.oembeded .oembed_photo{display:inline-block}img[data-echo]{margin:25px 0;width:100px;height:100px;background:url(../img/ajax.gif) center center no-repeat #fff}.spinner{display:inline-block;width:10px;height:10px;margin-bottom:-.1em;border:2px solid rgba(0,0,0,.5);border-top-color:transparent;border-radius:100%;-webkit-animation:spin 1s infinite linear;animation:spin 1s infinite linear}.spinner:after{content:'';display:block;width:0;height:0;position:absolute;top:-6px;left:0;border:4px solid transparent;border-bottom-color:rgba(0,0,0,.5);-webkit-transform:rotate(45deg);transform:rotate(45deg)}@-webkit-keyframes spin{to{-webkit-transform:rotate(360deg)}}@keyframes spin{to{transform:rotate(360deg)}}p.toc{margin:0!important}p.toc ul{padding-left:10px}p.toc>ul{padding:10px;margin:0 10px;display:inline-block;border:1px solid #ededed;border-radius:5px}p.toc li,p.toc ul{list-style-type:none}p.toc li{width:100%;padding:0;overflow:hidden}p.toc li a::after{content:"."}p.toc li a:before{content:"• "}p.toc h5{text-transform:uppercase}p.toc .title{float:left;padding-right:3px}p.toc .number{margin:0;float:right;padding-left:3px;background:#fff;display:none}input.task-list-item{margin-left:-1.62em}.markdown{font-family:"Hiragino Sans GB","Microsoft YaHei",STHeiti,SimSun,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",'Segoe UI',AppleSDGothicNeo-Medium,'Malgun Gothic',Verdana,Tahoma,sans-serif;padding:20px}.markdown a{text-decoration:none;vertical-align:baseline}.markdown a:hover{text-decoration:underline}.markdown h1{font-size:2.2em;font-weight:700;margin:1.5em 0 1em}.markdown h2{font-size:1.8em;font-weight:700;margin:1.275em 0 .85em}.markdown h3{font-size:1.6em;font-weight:700;margin:1.125em 0 .75em}.markdown h4{font-size:1.4em;font-weight:700;margin:.99em 0 .66em}.markdown h5{font-size:1.2em;font-weight:700;margin:.855em 0 .57em}.markdown h6{font-size:1em;font-weight:700;margin:.75em 0 .5em}.markdown h1+p,.markdown h1:first-child,.markdown h2+p,.markdown h2:first-child,.markdown h3+p,.markdown h3:first-child,.markdown h4+p,.markdown h4:first-child,.markdown h5+p,.markdown h5:first-child,.markdown h6+p,.markdown h6:first-child{margin-top:0}.markdown hr{border:1px solid #ccc}.markdown p{margin:1em 0;word-wrap:break-word}.markdown ol{list-style-type:decimal}.markdown li{display:list-item;line-height:1.4em}.markdown blockquote{margin:1em 20px}.markdown blockquote>:first-child{margin-top:0}.markdown blockquote>:last-child{margin-bottom:0}.markdown blockquote cite:before{content:'\2014 \00A0'}.markdown .code{border-radius:3px;word-wrap:break-word}.markdown pre{border-radius:3px;word-wrap:break-word;border:1px solid #ccc;overflow:auto;padding:.5em}.markdown pre code{border:0;display:block}.markdown pre>code{font-family:Consolas,Inconsolata,Courier,monospace;font-weight:700;white-space:pre;margin:0}.markdown code{border-radius:3px;word-wrap:break-word;border:1px solid #ccc;padding:0 5px;margin:0 2px}.markdown img{max-width:100%}.markdown mark{color:#000;background-color:#fcf8e3}.markdown table{padding:0;border-collapse:collapse;border-spacing:0;margin-bottom:16px}.markdown table tr td,.markdown table tr th{border:1px solid #ccc;margin:0;padding:6px 13px}.markdown table tr th{font-weight:700}.markdown table tr th>:first-child{margin-top:0}.markdown table tr th>:last-child{margin-bottom:0}.markdown table tr td>:first-child{margin-top:0}.markdown table tr td>:last-child{margin-bottom:0}@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700);.haroopad{padding:20px;color:#222;font-size:15px;font-family:"Roboto Condensed",Tauri,"Hiragino Sans GB","Microsoft YaHei",STHeiti,SimSun,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",'Segoe UI',AppleSDGothicNeo-Medium,'Malgun Gothic',Verdana,Tahoma,sans-serif;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}.haroopad a{color:#3269a0}.haroopad a:hover{color:#4183c4}.haroopad h2{border-bottom:1px solid #e6e6e6}.haroopad h6{color:#777}.haroopad hr{border:1px solid #e6e6e6}.haroopad blockquote>code,.haroopad h1>code,.haroopad h2>code,.haroopad h3>code,.haroopad h4>code,.haroopad h5>code,.haroopad h6>code,.haroopad li>code,.haroopad p>code,.haroopad td>code{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:85%;background-color:rgba(0,0,0,.02);padding:.2em .5em;border:1px solid #efefef}.haroopad pre>code{font-size:1em;letter-spacing:-1px;font-weight:700}.haroopad blockquote{border-left:4px solid #e6e6e6;padding:0 15px;color:#777}.haroopad table{background-color:#fafafa}.haroopad table tr td,.haroopad table tr th{border:1px solid #e6e6e6}.haroopad table tr:nth-child(2n){background-color:#f2f2f2}.hljs{display:block;overflow-x:auto;padding:.5em;background:#fdf6e3;color:#657b83;-webkit-text-size-adjust:none}.diff .hljs-header,.hljs-comment,.hljs-doctype,.hljs-javadoc,.hljs-pi,.lisp .hljs-string{color:#93a1a1}.css .hljs-tag,.hljs-addition,.hljs-keyword,.hljs-request,.hljs-status,.hljs-winutils,.method,.nginx .hljs-title{color:#859900}.hljs-command,.hljs-dartdoc,.hljs-hexcolor,.hljs-link_url,.hljs-number,.hljs-phpdoc,.hljs-regexp,.hljs-rules .hljs-value,.hljs-string,.hljs-tag .hljs-value,.tex .hljs-formula{color:#2aa198}.css .hljs-function,.hljs-built_in,.hljs-chunk,.hljs-decorator,.hljs-id,.hljs-identifier,.hljs-localvars,.hljs-title,.vhdl .hljs-literal{color:#268bd2}.hljs-attribute,.hljs-class .hljs-title,.hljs-constant,.hljs-link_reference,.hljs-parent,.hljs-type,.hljs-variable,.lisp .hljs-body,.smalltalk .hljs-number{color:#b58900}.css .hljs-pseudo,.diff .hljs-change,.hljs-attr_selector,.hljs-cdata,.hljs-header,.hljs-pragma,.hljs-preprocessor,.hljs-preprocessor .hljs-keyword,.hljs-shebang,.hljs-special,.hljs-subst,.hljs-symbol,.hljs-symbol .hljs-string{color:#cb4b16}.hljs-deletion,.hljs-important{color:#dc322f}.hljs-link_label{color:#6c71c4}.tex .hljs-formula{background:#eee8d5}.MathJax_Hover_Frame{border-radius:.25em;-webkit-border-radius:.25em;-moz-border-radius:.25em;-khtml-border-radius:.25em;box-shadow:0 0 15px #83A;-webkit-box-shadow:0 0 15px #83A;-moz-box-shadow:0 0 15px #83A;-khtml-box-shadow:0 0 15px #83A;border:1px solid #A6D!important;display:inline-block;position:absolute}.MathJax_Hover_Arrow{position:absolute;width:15px;height:11px;cursor:pointer}#MathJax_About{position:fixed;left:50%;width:auto;text-align:center;border:3px outset;padding:1em 2em;background-color:#DDD;color:#000;cursor:default;font-family:message-box;font-size:120%;font-style:normal;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;z-index:201;border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px;-khtml-border-radius:15px;box-shadow:0 10px 20px gray;-webkit-box-shadow:0 10px 20px gray;-moz-box-shadow:0 10px 20px gray;-khtml-box-shadow:0 10px 20px gray;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}.MathJax_Menu{position:absolute;background-color:#fff;color:#000;width:auto;padding:2px;border:1px solid #CCC;margin:0;cursor:default;font:menu;text-align:left;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;z-index:201;box-shadow:0 10px 20px gray;-webkit-box-shadow:0 10px 20px gray;-moz-box-shadow:0 10px 20px gray;-khtml-box-shadow:0 10px 20px gray;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}.MathJax_MenuItem{padding:2px 2em;background:0 0}.MathJax_MenuArrow{position:absolute;right:.5em;color:#666}.MathJax_MenuActive .MathJax_MenuArrow{color:#fff}.MathJax_MenuArrow.RTL{left:.5em;right:auto}.MathJax_MenuCheck{position:absolute;left:.7em}.MathJax_MenuCheck.RTL{right:.7em;left:auto}.MathJax_MenuRadioCheck{position:absolute;left:1em}.MathJax_MenuRadioCheck.RTL{right:1em;left:auto}.MathJax_MenuLabel{padding:2px 2em 4px 1.33em;font-style:italic}.MathJax_MenuRule{border-top:1px solid #CCC;margin:4px 1px 0}.MathJax_MenuDisabled{color:GrayText}.MathJax_MenuActive{background-color:Highlight;color:HighlightText}.MathJax_Menu_Close{position:absolute;width:31px;height:31px;top:-15px;left:-15px}#MathJax_Zoom{position:absolute;background-color:#F0F0F0;overflow:auto;display:block;z-index:301;padding:.5em;border:1px solid #000;margin:0;font-weight:400;font-style:normal;text-align:left;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;box-shadow:5px 5px 15px #AAA;-webkit-box-shadow:5px 5px 15px #AAA;-moz-box-shadow:5px 5px 15px #AAA;-khtml-box-shadow:5px 5px 15px #AAA;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}#MathJax_ZoomOverlay{position:absolute;left:0;top:0;z-index:300;display:inline-block;width:100%;height:100%;border:0;padding:0;margin:0;background-color:#fff;opacity:0;filter:alpha(opacity=0)}#MathJax_ZoomFrame{position:relative;display:inline-block;height:0;width:0}#MathJax_ZoomEventTrap{position:absolute;left:0;top:0;z-index:302;display:inline-block;border:0;padding:0;margin:0;background-color:#fff;opacity:0;filter:alpha(opacity=0)}.MathJax_Preview{color:#888}#MathJax_Message{position:fixed;left:1px;bottom:2px;background-color:#E6E6E6;border:1px solid #959595;margin:0;padding:2px 8px;z-index:102;color:#000;font-size:80%;width:auto;white-space:nowrap}#MathJax_MSIE_Frame{position:absolute;top:0;left:0;width:0;z-index:101;border:0;margin:0;padding:0}.MathJax_Error{color:#C00;font-style:italic}footer{position:fixed;font-size:.8em;text-align:right;bottom:0;margin-left:-25px;height:20px;width:100%}</style>
+</head>
+<body class="markdown haroopad">
+<h1 id="php语法"><a name="php语法" href="#php语法"></a>PHP语法</h1><ul>
+<li><code>$query-&gt;num_rows</code>:获取数据集中某个某个数据的行数<h2 id="php语言格式:"><a name="php语言格式:" href="#php语言格式:"></a>PHP语言格式:</h2>
+<ul>
+<li>PHP文件必须<code>&lt;?php</code>开头</li><li>每行代码必须以<code>;</code>结束,<code>if</code>等有固定格式的除外</li><li><code>echo</code> 输出字符串<ul>
+<li>PHP变量定义及使用方式:<pre><code data-origin="<pre><code>$preCure = “hanaNono”;
+echo $preCure;
+</code></pre>">$preCure = “hanaNono”;
+echo $preCure;
+</code></pre></li></ul>
+</li></ul>
+</li></ul><h2 id="php的常用字符串函数"><a name="php的常用字符串函数" href="#php的常用字符串函数"></a>PHP的常用字符串函数</h2><p><strong>字符串(或者变量是字符串)之间以小数点辅以空格连接</strong><br><code>echo "&lt;br/&gt;";</code>换行<br><code>echo strlen(美分符开头的变量名);</code>字符串长度计算<br><code>echo substr($str, 0, 5);</code>字符串截取(开头是变量名,中间是开始位置,最后是截取长度)<br><code>echo strpos($str, "world");</code>搜索字符串起始位置(变量名,所要搜索的字符串)<br><code>explode(" ", $str);</code>把字符串按分割符 分割成数组<br><code>var_dump( explode(" ", $str) );</code>打印数组和字符串的内容并显示其长度和类型<br><code>echo substr($lauguage, 0, strpos($lauguage, $search));</code>截取某段字符串之前的值<br><code>$message = array();</code>定义空数组<br><code>$php1 = count($php12);</code>数组长度<br><code>$message = array("username" =&gt; "wasl", "age" =&gt; 18, "sexy" =&gt; "Male");</code>键名自定义数组<br><code>echo $arr2["username"];</code>输出数组对应的键名的值<br><code>array_push($numArray, 7);</code>向对应数组的末尾推入一个值<br><code>$pop = array_pop($numArray);</code>把指定数组的最后一位推出并赋值于指定变量<br><code>$mes["age"] = 20;</code>给数组中直接给新添加的索引赋值<br><code>$lan = implode(" ", $lan);</code>把数组按指定分割符合并成字符串</p><pre><code data-origin="<pre><code>if (!$boolean) {
+    echo 1;
+} else {
+    echo 0;
+}
+</code></pre>">if (!$boolean) {
+    echo 1;
+} else {
+    echo 0;
+}
+</code></pre><p><strong>↑PHP的逻辑判断结构</strong><br>(<strong>!=变量的boolean值的反义词↑</strong>);<br><strong><code>Boolean</code>:true&amp;false</strong></p><pre><code data-origin="<pre><code>define(&quot;NAME&quot;, &quot;Lala&quot;);
+define(&quot;FIRSTNAME&quot;, &quot;Hagomoro&quot;);
+echo NAME;
+echo FIRSTNAME;
+</code></pre>">define("NAME", "Lala");
+define("FIRSTNAME", "Hagomoro");
+echo NAME;
+echo FIRSTNAME;
+</code></pre><p><strong>↑宏定义:将一个值赋予一个变量以用于全局.</strong><br>(<strong>宏定义中设定的变量名要全部大写,后面的值可以小写↑</strong>)</p><ul>
+<li>面向对象编程的三大重要概念:<ul>
+<li>封装性：封装是一种信息隐蔽技术，它体现于类的说明，是对象的重要特性。封装使数据和加工该数据的方法（函数）封装为一个整体，以实现独立性很强的模块，使得用户只能见到对象的外特性（对象能接受哪些消息，具有那些处理能力），而对象的内特性（保存内部状态的私有数据和实现加工能力的算法）对用户是隐蔽的。封装的目的在于把对象的设计者和对象的使用者分开，使用者不必知晓行为实现的细节，只须用设计者提供的消息来访问该对象。</li><li>继承性：继承性是子类自动共享父类之间数据和方法的机制。它由类的派生功能体现。一个类直接继承其它类的全部描述，同时可修改和扩充。继承具有传递性。继承分为单继承（一个子类只有一父类）和多重继承（一个类有多个父类）。类的对象是各自封闭的，如果没继承性机制，则类对象中数据、方法就会出现大量重复。继承不仅支持系统的可重用性，而且还促进系统的可扩充性。</li><li>多态性：对象根据所接收的消息而做出动作。同一消息为不同的对象接受时可产生完全不同的行动，这种现象称为多态性。利用多态性用户可发送一个通用的信息，而将所有的实现细节都留给接受消息的对象自行决定，如是，同一消息即可调用不同的方法。例如：Print消息被发送给一图或表时调用的打印方法与将同样的Print消息发送给一正文文件而调用的打印方法会完全不同。多态性的实现受到继承性的支持，利用类继承的层次关系，把具有通用功能的协议存放在类层次中尽可能高的地方，而将实现这一功能的不同方法置于较低层次，这样，在这些低层次上生成的对象就能给通用消息以不同的响应。在OOPL中可通过在派生类中重定义基类函数（定义为重载函数或虚函数）来实现多态性。</li></ul>
+</li></ul><h2 id="php本地根目录查询"><a name="php本地根目录查询" href="#php本地根目录查询"></a>PHP本地根目录查询</h2><pre><code data-origin="<pre><code>* 1.打开PHPStudy
+* 2.“其他选项菜单”
+* 3.“网站根目录”
+* 4.Localhost/127.0.0.1
+* 5.Phpinfo.php
+</code></pre>">* 1.打开PHPStudy
+* 2.“其他选项菜单”
+* 3.“网站根目录”
+* 4.Localhost/127.0.0.1
+* 5.Phpinfo.php
+</code></pre><h2 id="php事物设定/定义某类"><a name="php事物设定/定义某类" href="#php事物设定/定义某类"></a>PHP事物设定/定义某类</h2><pre><code data-origin="<pre><code>class Test {
+    public $age;
+    private $sex;
+}
+</code></pre>">class Test {
+    public $age;
+    private $sex;
+}
+</code></pre><p><strong>↑关键词class开头,其类名称必须首字母大写，然后加空格花括号</strong></p><ul>
+<li>class下可用定义属性和方法:<br><code>public</code>:公开,可外部调用和内部使用,方法<code>(class) public function 信息名</code><br><code>private</code>:仅自己使用(私有),方法同上<br><code>protected</code>:仅自己使用和继承(保护),方法同上<pre><code data-origin="<pre><code>public function setAge($age){
+  $this-&amp;gt;age = $age;
+}
+private function setSex($sex){
+  $this-&amp;gt;sex = $sex;
+  return $this-&amp;gt;sex;
+}
+protected function setName($name){
+  $this-&amp;gt;name = $name;
+  return $this-&amp;gt;name;
+}
+</code></pre>">public function setAge($age){
+  $this-&gt;age = $age;
+}
+private function setSex($sex){
+  $this-&gt;sex = $sex;
+  return $this-&gt;sex;
+}
+protected function setName($name){
+  $this-&gt;name = $name;
+  return $this-&gt;name;
+}
+</code></pre><pre><code data-origin="<pre><code>public function makePerson($age, $sex, $name){
+  $personAge = $this-&amp;gt;setAge($age);
+  $personSex = $this-&amp;gt;setSex($sex);
+  $personName = $this-&amp;gt;setName($name);
+  $person = array(&quot;age&quot; =&amp;gt; &quot;&quot;, &quot;sex&quot; =&amp;gt; &quot;&quot;, &quot;name&quot; =&amp;gt; &quot;&quot;);
+  $person[&quot;age&quot;] = $personAge;
+  $person[&quot;sex&quot;] = $personSex;
+  $person[&quot;name&quot;] = $personName;
+  return $person;
+}
+</code></pre>">public function makePerson($age, $sex, $name){
+  $personAge = $this-&gt;setAge($age);
+  $personSex = $this-&gt;setSex($sex);
+  $personName = $this-&gt;setName($name);
+  $person = array("age" =&gt; "", "sex" =&gt; "", "name" =&gt; "");
+  $person["age"] = $personAge;
+  $person["sex"] = $personSex;
+  $person["name"] = $personName;
+  return $person;
+}
+</code></pre><code>makePerson</code>:一个公开创造虚拟人物的办法<br><code>$this</code>: 一个类在其内部调用自己的方法和属性的时候,所使用的一个变量</li></ul><pre><code data-origin="<pre><code>$obj-&amp;gt;setAge(30);
+echo $obj-&amp;gt;age;
+</code></pre>">$obj-&gt;setAge(30);
+echo $obj-&gt;age;
+</code></pre><p><strong>↑调用公开class的办法</strong></p><pre><code data-origin="<pre><code>$obj = new Test();
+echo $obj-&amp;gt;age;
+</code></pre>">$obj = new Test();
+echo $obj-&gt;age;
+</code></pre><p><strong>↑外部调用public信息的方式</strong><br><code>new</code>:实例化一个类</p><p><code>$_GET["test"];</code><br><strong>↑从浏览器的GET方式所获得的字符串</strong><br><strong>↓使用方式</strong>:<br>var_dump($_GET[“test”]);<br>然后:</p><pre><code data-origin="<pre><code>http://localhost/object.php(分开看)?test=任意要输入的字符串
+</code></pre>">http://localhost/object.php(分开看)?test=任意要输入的字符串
+</code></pre><p><code>$_POST["name"];</code><br><strong>↑以POST方式所获得的字符串</strong><br>使用方式是Postman<br>两者区别:POST提交的信息不会在浏览器的网址栏显示</p><p><code>require</code> 要求、包括;如果要引用的文件不存在,则抛出异常程序结束<br>用法:</p><pre><code data-origin="<pre><code>require &quot;./Persona.php&quot;;
+</code></pre>">require "./Persona.php";
+</code></pre><p><strong>↑你所要引用的文件的路径</strong><br><code>./</code> 当前文件的相对路径</p><p><code>include</code> 也是包括;如果要引用的文件不存在,则弹出相应警告，然后继续,一般用于框架中的公共模块<br><strong>↓用法</strong>:</p><pre><code data-origin="<pre><code>include &quot;./Person.php&quot;;
+</code></pre>">include "./Person.php";
+</code></pre><p><strong>↑你所要引用的文件的路径</strong><br><code>./</code> 当前文件的相对路径</p><p>其相同点是引用的文件可以直接使用.</p><pre><code data-origin="<pre><code>require &quot;./includeString.php&quot;;
+echo $name;
+</code></pre>">require "./includeString.php";
+echo $name;
+</code></pre><p><strong>↑此变量name来自名为includeString的php文件</strong></p><p><strong>PHP变量名定义规范:<br>不能以特殊符号和非现代英文26字母以外的文字命名和不能以数字开头(一般情况下尽量不用).</strong></p><ul>
+<li>怎么定义函数:</li><li>函数名一般为自定义，以function开头，例子如下:<pre><code data-origin="<pre><code>  function 自定义函数名($赋值形式参数, $未赋值形式参数) {
+  //函数代码逻辑,此为函数逻辑的代码,注释是不会运行,用于让开发者们在开发过程中更好理解;
+  }
+</code></pre>">  function 自定义函数名($赋值形式参数, $未赋值形式参数) {
+  //函数代码逻辑,此为函数逻辑的代码,注释是不会运行,用于让开发者们在开发过程中更好理解;
+  }
+</code></pre><ul>
+<li>实参:实际参数调用此函数所传的参数，是一个有类型的变量参数</li><li>形参:形式参数只为实参存在，接受函数参数的变量。</li></ul>
+</li></ul><h2 id="php在mysql中获取数据的方式"><a name="php在mysql中获取数据的方式" href="#php在mysql中获取数据的方式"></a>Php在mySQL中获取数据的方式</h2><h3 id="语法解释"><a name="语法解释" href="#语法解释"></a>语法解释</h3><pre><code data-origin="<pre><code>    ```
+$host = &quot;地址&quot;;
+$user = &quot;用户名&quot;;
+$password = &quot;密码&quot;;
+$database = &quot;数据库名&quot;;
+try {
+    $connect = mysqli_connect($host, $user, $password, $database);
+    var_dump(mysqli_connect_errno());
+    var_dump($connect);
+$sql = &quot;select * from `users` where `id` &amp;gt; 0&quot;;
+$result = mysqli_query($connect, $sql);
+var_dump($result);
+echo &quot;&amp;lt;br/&amp;gt;&quot;;
+while ($row = mysqli_fetch_array($result)) {
+    echo $row['id'];
+    echo &quot;&amp;lt;br/&amp;gt;&quot;;
+    echo $row['username'];
+    echo &quot;&amp;lt;br/&amp;gt;&quot;;
+    echo $row['password'];
+    echo &quot;&amp;lt;br/&amp;gt;&quot;;
+    echo $row['sex'];
+    echo &quot;&amp;lt;br/&amp;gt;&quot;;
+}
+mysqli_close($connect);
+} catch (ErrorException $e) {
+    echo $e-&amp;gt;getMessage();
+}
+```
+* **例内语法解释↑:**
+    * Mysqli_connect_Errno(error number) 错误代码
+    * Mysqli_Query 执行
+    * Mysqli_Fetch_array 从结果集中获取数据并将其变成数组,通常配合while使用
+* **当字符串内需要使用变量时，即用{},也就是花括号括起来,且如果是字符串,还需要单引号引起来↓**
+```
+$sql = &quot;update `users` set `password` = ‘{$pwd}’ where `id` &amp;gt; 0&quot;;
+```
+* 与前端结合后的后端资料的交互方式
+    * date(“Y-m-d H:i:s”); 当前时间
+    * Y:year
+    * m:mouth
+    * d:day
+    * **(Y,m,d用&quot;-&quot;接合然后位于左边,H,i,s用&quot;:&quot;接合然后位于右边,但两边相距一个空格)**
+    * H:hour
+    * i:minute
+    * s:second
+    * **例子↓**
+
+```
+$host = &quot;127.0.0.1&quot;;
+$user = &quot;root&quot;;
+$password = &quot;root&quot;;
+$database = &quot;mall&quot;;
+$connect = mysqli_connect($host, $user, $password, $database);
+$username = $_POST[&quot;username&quot;];
+$password = $_POST[&quot;password&quot;];
+$mobile = $_POST[&quot;mobile&quot;];
+**//$nowTime = date(&quot;Y-m-d H:i:s&quot;);//**
+$sql = &quot;insert into `users` (`username`, `password`, `sex`, `create_time`, `update_time`) value ('{$username}', '{$password}', 'man', '{$nowTime}', '{$nowTime}')&quot;;
+echo $sql;
+$query = mysqli_query($connect, $sql);
+
+echo &quot;success&quot;;
+mysqli_close($connect);
+```
+</code></pre>">    ```
+$host = "地址";
+$user = "用户名";
+$password = "密码";
+$database = "数据库名";
+try {
+    $connect = mysqli_connect($host, $user, $password, $database);
+    var_dump(mysqli_connect_errno());
+    var_dump($connect);
+$sql = "select * from `users` where `id` &gt; 0";
+$result = mysqli_query($connect, $sql);
+var_dump($result);
+echo "&lt;br/&gt;";
+while ($row = mysqli_fetch_array($result)) {
+    echo $row['id'];
+    echo "&lt;br/&gt;";
+    echo $row['username'];
+    echo "&lt;br/&gt;";
+    echo $row['password'];
+    echo "&lt;br/&gt;";
+    echo $row['sex'];
+    echo "&lt;br/&gt;";
+}
+mysqli_close($connect);
+} catch (ErrorException $e) {
+    echo $e-&gt;getMessage();
+}
+```
+* **例内语法解释↑:**
+    * Mysqli_connect_Errno(error number) 错误代码
+    * Mysqli_Query 执行
+    * Mysqli_Fetch_array 从结果集中获取数据并将其变成数组,通常配合while使用
+* **当字符串内需要使用变量时，即用{},也就是花括号括起来,且如果是字符串,还需要单引号引起来↓**
+```
+$sql = "update `users` set `password` = ‘{$pwd}’ where `id` &gt; 0";
+```
+* 与前端结合后的后端资料的交互方式
+    * date(“Y-m-d H:i:s”); 当前时间
+    * Y:year
+    * m:mouth
+    * d:day
+    * **(Y,m,d用"-"接合然后位于左边,H,i,s用":"接合然后位于右边,但两边相距一个空格)**
+    * H:hour
+    * i:minute
+    * s:second
+    * **例子↓**
+
+```
+$host = "127.0.0.1";
+$user = "root";
+$password = "root";
+$database = "mall";
+$connect = mysqli_connect($host, $user, $password, $database);
+$username = $_POST["username"];
+$password = $_POST["password"];
+$mobile = $_POST["mobile"];
+**//$nowTime = date("Y-m-d H:i:s");//**
+$sql = "insert into `users` (`username`, `password`, `sex`, `create_time`, `update_time`) value ('{$username}', '{$password}', 'man', '{$nowTime}', '{$nowTime}')";
+echo $sql;
+$query = mysqli_query($connect, $sql);
+
+echo "success";
+mysqli_close($connect);
+```
+</code></pre><ul>
+<li><p><strong><code>die();</code> 强制结束其程序↓</strong></p>
+<pre><code data-origin="<pre><code>  $search = &quot;select * from `users` where `username` = '{$username}'&quot;;
+  $query = mysqli_query($connect, $search);
+  if ($query-&amp;gt;num_rows &amp;gt; 0) {
+      while ($sleACT = mysqli_fetch_array($query)) {
+          if ($sleACT) {
+              echo &quot;&amp;lt;br/&amp;gt;&quot;;
+              echo &quot;username is created or used&quot;;
+              die();
+          }
+      }
+  } else {
+      $sql = &quot;insert into `users` (`username`, `password`, `sex`, `create_time`, `update_time`) value ('{$username}', '{$password}', 'man', '{$nowTime}', '{$nowTime}')&quot;;
+      echo $sql;
+      $query = mysqli_query($connect, $sql);
+  }
+
+  echo &quot;&amp;lt;br/&amp;gt;&quot;;
+  echo &quot;success&quot;;
+  mysqli_close($connect);
+</code></pre>">  $search = "select * from `users` where `username` = '{$username}'";
+  $query = mysqli_query($connect, $search);
+  if ($query-&gt;num_rows &gt; 0) {
+      while ($sleACT = mysqli_fetch_array($query)) {
+          if ($sleACT) {
+              echo "&lt;br/&gt;";
+              echo "username is created or used";
+              die();
+          }
+      }
+  } else {
+      $sql = "insert into `users` (`username`, `password`, `sex`, `create_time`, `update_time`) value ('{$username}', '{$password}', 'man', '{$nowTime}', '{$nowTime}')";
+      echo $sql;
+      $query = mysqli_query($connect, $sql);
+  }
+
+  echo "&lt;br/&gt;";
+  echo "success";
+  mysqli_close($connect);
+</code></pre></li></ul><h3 id="登录/注册的逻辑"><a name="登录/注册的逻辑" href="#登录/注册的逻辑"></a>登录/注册的逻辑</h3><ul>
+<li>一、先头准备<pre><code data-origin="<pre><code>  $host = &quot;本机地址&quot;;
+  $user = &quot;本地用户名-root&quot;;
+  $pwd = &quot;本地密码-root&quot;;
+  $database = &quot;目标数据库&quot;;
+  $connect = mysqli_connect($host, $user, $pwd, $database);
+  $username = $_POST[&quot;username&quot;];
+  $password = $_POST[&quot;password&quot;];
+</code></pre>">  $host = "本机地址";
+  $user = "本地用户名-root";
+  $pwd = "本地密码-root";
+  $database = "目标数据库";
+  $connect = mysqli_connect($host, $user, $pwd, $database);
+  $username = $_POST["username"];
+  $password = $_POST["password"];
+</code></pre>  如果是注册,很大可能还要再加上:<pre><code data-origin="<pre><code>  $mobile = $_POST[&quot;mobile&quot;];
+  $nowTime = date(&quot;Y-m-d H:i:s&quot;);
+</code></pre>">  $mobile = $_POST["mobile"];
+  $nowTime = date("Y-m-d H:i:s");
+</code></pre><ul>
+<li>“热身”句子<pre><code data-origin="<pre><code>$search = &quot;select * from `users` where `username` = '{$username}'&quot;;(必备的SQL搜索语句)
+$query = mysqli_query($connect, $search);(执行连接和搜索)
+</code></pre>">$search = "select * from `users` where `username` = '{$username}'";(必备的SQL搜索语句)
+$query = mysqli_query($connect, $search);(执行连接和搜索)
+</code></pre></li></ul>
+</li><li>二、登录篇<ul>
+<li>1.判断用户名是否存在</li><li>2.如用户名存在则开始判断其密码是否正确<ul>
+<li>2-1.如不存在则登陆失败</li></ul>
+</li><li>3.判断密码是否正确,如密码和数据库里的不匹配,则登陆失败<ul>
+<li>3-1.如匹配则登录成功</li></ul>
+</li></ul>
+</li></ul><pre><code data-origin="<pre><code>if ($query-&amp;gt;num_rows == 0) { //1
+    echo &quot;the username wasn't exist&quot;; //2-1
+    return;
+} else {
+    while ($check = mysqli_fetch_array($query)) { //2
+        if ($check) {
+            if ($password == $check[&quot;password&quot;]) { //3-1
+                echo &quot;login success&quot;;
+                return;
+            } else { //3
+                echo &quot;pwd error&quot;;
+                return;
+            }
+        }
+    }
+}
+</code></pre>">if ($query-&gt;num_rows == 0) { //1
+    echo "the username wasn't exist"; //2-1
+    return;
+} else {
+    while ($check = mysqli_fetch_array($query)) { //2
+        if ($check) {
+            if ($password == $check["password"]) { //3-1
+                echo "login success";
+                return;
+            } else { //3
+                echo "pwd error";
+                return;
+            }
+        }
+    }
+}
+</code></pre><ul>
+<li>三、注册篇<ul>
+<li>1.判断用户名在表内是否存在</li><li>2.如用户名存在则判断失败</li><li>3.如注册在表内不存在则注册成功<pre><code data-origin="<pre><code>if ($query-&amp;gt;num_rows &amp;gt; 0) { //1
+  while ($sleACT = mysqli_fetch_array($query)) {
+      if ($sleACT) {
+          echo &quot;&amp;lt;br/&amp;gt;&quot;;
+          echo &quot;username is created or used&quot;;//2
+          die();
+      }
+  }
+} else {
+  $sql = &quot;insert into `users` (`username`, `password`, `sex`, `create_time`, `update_time`) value ('{$username}', '{$password}', 'man', '{$nowTime}', '{$nowTime}')&quot;;
+  echo $sql;
+  $query = mysqli_query($connect, $sql);//3
+}
+</code></pre>">if ($query-&gt;num_rows &gt; 0) { //1
+  while ($sleACT = mysqli_fetch_array($query)) {
+      if ($sleACT) {
+          echo "&lt;br/&gt;";
+          echo "username is created or used";//2
+          die();
+      }
+  }
+} else {
+  $sql = "insert into `users` (`username`, `password`, `sex`, `create_time`, `update_time`) value ('{$username}', '{$password}', 'man', '{$nowTime}', '{$nowTime}')";
+  echo $sql;
+  $query = mysqli_query($connect, $sql);//3
+}
+</code></pre></li></ul>
+</li></ul><h1 id="mysql数据库"><a name="mysql数据库" href="#mysql数据库"></a>MySQL数据库</h1><ul>
+<li>一、基本语法:<br>  <code>F9</code> 运行SQL代码的键位<br>  <code>CREATE DATABASE “数据库名”;</code> 创建并命名一个新数据库<br>  <code>DROP DATABASE “数据库名”</code>;卸载目标数据库<br>  <code>DROP TABLE</code> <code>表名</code>;删除目标表<br>  <code>Now()</code> 在表中表现现在的时间</li><li>二、建立表格:<pre><code data-origin="<pre><code>  CREATE TABLE `表名` (
+    `id` INT(11) NOT NULL AUTO_INCREMENT,
+    `username` VARCHAR(20) NOT NULL COMMENT '用户名',
+    `password` VARCHAR(32) NOT NULL COMMENT '密码',
+    `creat_time` DATETIME DEFAULT NULL COMMENT '创建时间',
+    `update_time` DATETIME DEFAULT NULL COMMENT '更新时间',
+    PRIMARY KEY (`id`)
+  ) ENGINE=INNODB DEFAULT CHARSET=utf8;
+</code></pre>">  CREATE TABLE `表名` (
+    `id` INT(11) NOT NULL AUTO_INCREMENT,
+    `username` VARCHAR(20) NOT NULL COMMENT '用户名',
+    `password` VARCHAR(32) NOT NULL COMMENT '密码',
+    `creat_time` DATETIME DEFAULT NULL COMMENT '创建时间',
+    `update_time` DATETIME DEFAULT NULL COMMENT '更新时间',
+    PRIMARY KEY (`id`)
+  ) ENGINE=INNODB DEFAULT CHARSET=utf8;
+</code></pre></li><li>三、表格中插入数据:<pre><code data-origin="<pre><code>  INSERT INTO `数据库中已存在表名` (
+  `若干字段-以逗号隔开`,) VALUE ('字段对应的值-也以逗号隔开');
+</code></pre>">  INSERT INTO `数据库中已存在表名` (
+  `若干字段-以逗号隔开`,) VALUE ('字段对应的值-也以逗号隔开');
+</code></pre>  <strong>↓如果是多人则<code>value</code>改成<code>values</code></strong><pre><code data-origin="<pre><code>  INSERT INTO `users` (
+  `username`,`password`,`create_time`,`update_time`
+  ) VALUES ('cxk123','cxknmsl','2019-06-03 10:20:35','2019-06-03 10:21:16'),
+  ('nikki','nikki1206','2019-06-03 10:20:35','2019-06-03 10:21:16'),
+  ('cxkFans','cxkF2019y01m01d','2019-06-03 10:20:35','2019-06-03 10:21:16'),
+  ('sjfosjoejcie','asdfghjkl123456789','2019-06-03 10:20:35','2019-06-03 10:21:16'),
+  ('howlongmybaby','15kilimetersss','2019-06-03 10:20:35','2019-06-03 10:21:16');
+</code></pre>">  INSERT INTO `users` (
+  `username`,`password`,`create_time`,`update_time`
+  ) VALUES ('cxk123','cxknmsl','2019-06-03 10:20:35','2019-06-03 10:21:16'),
+  ('nikki','nikki1206','2019-06-03 10:20:35','2019-06-03 10:21:16'),
+  ('cxkFans','cxkF2019y01m01d','2019-06-03 10:20:35','2019-06-03 10:21:16'),
+  ('sjfosjoejcie','asdfghjkl123456789','2019-06-03 10:20:35','2019-06-03 10:21:16'),
+  ('howlongmybaby','15kilimetersss','2019-06-03 10:20:35','2019-06-03 10:21:16');
+</code></pre></li><li><p>四、对已存在数据的处理方式:</p>
+<ul>
+<li>最基本查询方式:<pre><code data-origin="<pre><code>SELECT *(星号仅用于表内所有字段)或者`表内指定类名`  FROM `表名` WHERE `id` = 3;
+</code></pre>">SELECT *(星号仅用于表内所有字段)或者`表内指定类名`  FROM `表名` WHERE `id` = 3;
+</code></pre></li><li>表内数据删除方式:<pre><code data-origin="<pre><code>DELETE FROM `users` WHERE `id` &amp;lt;&amp;gt; 2;
+</code></pre>">DELETE FROM `users` WHERE `id` &lt;&gt; 2;
+</code></pre></li><li>修改数据的方法:<pre><code data-origin="<pre><code>UPDATE `表名` SET `字段名` = '值' WHERE 条件(`id` = 1),如果是多条件必须被同时满足,使用and与其相连;
+</code></pre>">UPDATE `表名` SET `字段名` = '值' WHERE 条件(`id` = 1),如果是多条件必须被同时满足,使用and与其相连;
+</code></pre></li><li>模糊搜索的方法:<pre><code data-origin="<pre><code>SELECT * FROM `users` WHERE `username` LIKE '%caixukun%';
+</code></pre>">SELECT * FROM `users` WHERE `username` LIKE '%caixukun%';
+</code></pre><strong>↑模糊搜索的目标对象应该头尾都是百分符（%）</strong></li><li>And(和、与)和like的组合使用:<pre><code data-origin="<pre><code>SELECT * FROM `users` WHERE `id` &amp;gt; 1 AND `username` LIKE '%cai%';
+</code></pre>">SELECT * FROM `users` WHERE `id` &gt; 1 AND `username` LIKE '%cai%';
+</code></pre></li><li>Or(或者)的使用方式:<pre><code data-origin="<pre><code>SELECT * FROM `users` WHERE `id` = 1 OR `id` = 3;
+</code></pre>">SELECT * FROM `users` WHERE `id` = 1 OR `id` = 3;
+</code></pre></li><li>where加括号在面对多种条件时的应用方式<pre><code data-origin="<pre><code>SELECT * FROM `users` WHERE (`id` &amp;gt;= 2 AND `username` LIKE '%cai%') OR `id` = 1 ;
+</code></pre>">SELECT * FROM `users` WHERE (`id` &gt;= 2 AND `username` LIKE '%cai%') OR `id` = 1 ;
+</code></pre></li><li>升/降序排序:<pre><code data-origin="<pre><code>SELECT * FROM `users` WHERE `id` &amp;gt; 0 ORDER BY `sort` ASC/DESC;
+</code></pre>">SELECT * FROM `users` WHERE `id` &gt; 0 ORDER BY `sort` ASC/DESC;
+</code></pre><strong>ORDER BY <code>字段名</code> ASC/DESC 表内排序</strong></li><li>数据数量查询:<pre><code data-origin="<pre><code>SELECT COUNT(*) FROM `表名` WHERE `id` &amp;gt; 1;
+</code></pre>">SELECT COUNT(*) FROM `表名` WHERE `id` &gt; 1;
+</code></pre><strong>COUNT:统计总条数,但是也可以加入任何条件</strong></li><li>统计字段累加的总和<pre><code data-origin="<pre><code>SELECT SUM(`字段`) FROM `表名` WHERE `id` &amp;gt; 1;
+</code></pre>">SELECT SUM(`字段`) FROM `表名` WHERE `id` &gt; 1;
+</code></pre><strong>SUM(<code>字段名</code>) 统计已存在目标字段的总和</strong></li><li>分组统计<pre><code data-origin="<pre><code>SELECT COUNT(*),`字段` FROM `表名` WHERE `id` &amp;lt;&amp;gt; 0 GROUP BY `同第一字段`;
+</code></pre>">SELECT COUNT(*),`字段` FROM `表名` WHERE `id` &lt;&gt; 0 GROUP BY `同第一字段`;
+</code></pre><strong><code>Group by</code> 分组</strong></li><li>关联查询<pre><code data-origin="<pre><code>SELECT * FROM `主表(存有用户最基本主句)` INNER JOIN `次表` ON `主表`.`id` = `次表`.`次表的关联ID`;
+</code></pre>">SELECT * FROM `主表(存有用户最基本主句)` INNER JOIN `次表` ON `主表`.`id` = `次表`.`次表的关联ID`;
+</code></pre><strong><code>Inner join</code> 交集</strong></li><li><p>关联查询-重心向左(右)</p>
+<pre><code data-origin="<pre><code>SELECT * FROM `users` LEFT(RIGHT) JOIN `users_info` ON `主表`.`id` = `次表`.`此表的关联id`(位置调换);
+</code></pre>">SELECT * FROM `users` LEFT(RIGHT) JOIN `users_info` ON `主表`.`id` = `次表`.`此表的关联id`(位置调换);
+</code></pre><p><strong>(“=” 等于<br>“&gt;” 大于<br>“&lt;” 小于<br>“&gt;=” 大于等于<br>“&lt;=” 小于等于<br>“&lt;&gt;” 不等于<br>)</strong></p>
+</li></ul>
+</li></ul>
+
+<footer style="position:fixed; font-size:.8em; text-align:right; bottom:0px; margin-left:-25px; height:20px; width:100%;">generated by <a href="http://pad.haroopress.com" target="_blank">haroopad</a></footer>
+</body>
+</html>
