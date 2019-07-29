@@ -4,7 +4,9 @@
 
 * 常用方法词:
 	* `dump`:thinkPHP专有的变量调用词
-	* 
+	* `M`:连接已知存在的数据库中的目标表
+	* `where`:查询条件
+	* `save`:修改并保存修改后数据
 * 本地网页访问规则:`http://www.test.test(本地域名)/home(模块名)/test(控制器名)/index1(方法名)`
 	* 1.一个本地域名,如`http://www.test.test/`
 	* 2.模块名,在本地域名后,如`home`
@@ -40,3 +42,12 @@
     ```
     $whereArray = array("username" => "bugaoxing", "password" => "123456789");
     ```
+    * 3.有条件查询数据的方法
+    ```
+    $whereArray = array("username" => "bugaoxing", "password" => "123456789");
+    ```
+    * 4.修改数据的方法
+    ```
+    $updateResult = $user->where(array("id" => 12))->save(array("password" => "4567"));
+    ```
+    **`save`:修改数据的关键方法**

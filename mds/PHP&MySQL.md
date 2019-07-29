@@ -199,22 +199,25 @@ echo $name;
     	* Mysqli_connect_Errno(error number) 错误代码
         * Mysqli_Query 执行
         * Mysqli_Fetch_array 从结果集中获取数据并将其变成数组,通常配合while使用
-    * **当字符串内需要使用变量时，即用{},也就是花括号括起来,且如果是字符串,还需要单引号引起来↓**
+* **当字符串内需要使用变量时，即用{},也就是花括号括起来,且如果是字符串,还需要单引号引起来↓**
     ```
     $sql = "update `users` set `password` = ‘{$pwd}’ where `id` > 0";
     ```
-    * 与前端结合后的后端资料的交互方式
-        * date(“Y-m-d H:i:s”); 当前时间
-        * Y:year
-        * m:mouth
-        * d:day
-		* **(Y,m,d用"-"接合然后位于左边,H,i,s用":"接合然后位于右边,但两边相距一个空格)**
-        * H:hour
-        * i:minute
-        * s:second
-        * **例子↓**
+
+* 与前端结合后的后端资料的交互方式
+     * date(“Y-m-d H:i:s”); 当前时间
+     * Y:year
+     * m:mouth
+     * d:day
+	 * **(Y,m,d用"-"接合然后位于左边,H,i,s用":"接合然后位于右边,但两边相距一个空格)**
+     * H:hour
+     * i:minute
+     * s:second
+
+     * **例子↓**
 
     ```
+
     $host = "127.0.0.1";
     $user = "root";
     $password = "root";
