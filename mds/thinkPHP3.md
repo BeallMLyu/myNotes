@@ -9,6 +9,7 @@
 	* `save`:修改并保存修改后数据
 	* `select`:查询结果为多条数据
 	* `find`:查询结果为单条数据
+	* `ctrl+R`:替换目标字段
 * 本地网页访问规则:`http://www.test.test(本地域名)/home(模块名)/test(控制器名)/index1(方法名)`
 	* 1.一个本地域名,如`http://www.test.test/`
 	* 2.模块名,在本地域名后,如`home`
