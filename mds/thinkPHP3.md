@@ -54,3 +54,18 @@
     $updateResult = $user->where(array("id" => 12))->save(array("password" => "4567"));
     ```
     **`save`:修改数据的关键方法**
+
+## session&cookie
+
+* cookie的原理:
+当浏览器访问服务器的时候,服务器就会返回一个唯一的id给浏览器,这就是Cookie.这样,下次再访问同样服务器时就会带上这个Cookie,这样服务器就会知道这是谁了。
+
+* Session的原理:
+即浏览器通过访问服务器生成的存在于目标服务器里的缓存文件,但服务器本身可以设置需要缓存的内容,例如**uid**、**username**等基本信息.
+	* Session使用方法:
+		* 存储&读取:
+		```
+        session(‘name*可自定义的键名’， '可自定义的值')
+        ↑存储
+        dump($_SESSION*这是P仅限于PHP的全局session的变量);
+        ```
