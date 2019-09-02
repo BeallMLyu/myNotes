@@ -17,7 +17,7 @@
 `echo strlen(美分符开头的变量名);`字符串长度计算
 `echo substr($str, 0, 5);`字符串截取(开头是变量名,中间是开始位置,最后是截取长度)
 `echo strpos($str, "world");`搜索字符串起始位置(变量名,所要搜索的字符串)
-`explode(" ", $str);`把字符串按分割符 分割成数组
+`$自定义变量名 = explode(" ", $str);`把字符串按分割符 分割成数组
 `var_dump( explode(" ", $str) );`打印数组和字符串的内容并显示其长度和类型
 `echo substr($lauguage, 0, strpos($lauguage, $search));`截取某段字符串之前的值
 `$message = array();`定义空数组

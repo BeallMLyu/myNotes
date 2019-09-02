@@ -64,14 +64,16 @@
 即浏览器通过访问服务器生成的存在于目标服务器里的缓存文件,但服务器本身可以设置需要缓存的内容,例如**uid**、**username**等基本信息.
 	* Session使用方法:
 		* 存储&读取:
-            * 存储
+            * 原生PHP使用的session存储以及取出方式
             ```
             session(‘name*可自定义的键名’， '可自定义的值')
             ↑存储
             dump($_SESSION*这是仅限于PHP的全局session的变量);
+            $name = $_SESSION['name'];
+            echo $name;
             ```
 
-            * 取出
+            * 仅thinkPHP专用的简化版session存储方式
             ```
             session('可自定义键名1’, array('可自定义的键名2’ => '可自定义的值' *多个))；
             $自定义变量名 = session('之前的自定义键名1');
@@ -79,6 +81,12 @@
             echo '之前的自定义键名1'['指定数组中的指定键名'];
             ```
 
+            * thinkPHP专用的session取出&传输方式:
+            ```
+             $自定义变量名 = session('自定义键名');
+             $this->assign('如上所述的自定义键名', $如上所述的自定义变量名);
+             return $this->display();
+            ```
 ## 模板
 
 * 1.在thinkPHP中使用`$this->assign('自定义键名', '$自定义变量')`把参数传给前台html文件
