@@ -1,5 +1,21 @@
 # thinkPHP3.2
 
+##控制器格式
+```
+namespace Home\Controller;
+
+use Think\Controller;
+
+class AccountController extends Controller {
+    public function Index() {
+        $users = session('user');
+        $this->assign('user', $users);
+        return $this->display();
+    }
+}
+
+```
+
 ## 常用方法词
 
 * 常用方法词:
