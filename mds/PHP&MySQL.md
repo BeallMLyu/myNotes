@@ -333,6 +333,9 @@ if ($query->num_rows == 0) { //1
     `DROP DATABASE “数据库名”`;卸载目标数据库
     `DROP TABLE` `表名`;删除目标表
     `Now()` 在表中表现现在的时间
+    `int` 整形数字
+    `varchar` 字符串
+    `decimal` 浮点(小数点)数字,设置格式为(自定义数位,自定义小数点数位)
 * 二、建立表格:
     ```
     CREATE TABLE `表名` (
