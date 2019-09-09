@@ -107,3 +107,9 @@ class AccountController extends Controller {
 
 * 1.在thinkPHP中使用`$this->assign('自定义键名', '$自定义变量')`把参数传给前台html文件
 * 2.在html中使用`{$自定义变量[“已经在其变量所绑定的数组中完成自定义的键名”]}`
+* 用于html模板的数据库内多数据循环输出: 
+```
+<foreach name="之前assign赋值的变量,起绑定之用" item="标签内自定义变量">
+    {$之前于本标签内自定义的变量.id}:{$之前于本标签内自定义的变量.name}
+</foreach>
+```
