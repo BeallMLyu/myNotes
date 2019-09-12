@@ -113,3 +113,11 @@ class AccountController extends Controller {
     {$之前于本标签内自定义的变量.id}:{$之前于本标签内自定义的变量.name}
 </foreach>
 ```
+
+## 项目开发
+
+* ThinkPHP中，一个方法只能对应一个逻辑，否则网页就会出错。
+* 网页末尾加问号是GET形式特有的显示所接收的信息的方式。
+```
+http://www.test.test/Home/Commodity/update?id=1
+```
