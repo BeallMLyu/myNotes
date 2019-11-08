@@ -12,6 +12,11 @@
         echo $preCure;
 		```
 
+## 数据库建立:
+* 1.基字符集:utf8
+* 2.数据库排序规则:utf8_general_ci
+
+
 ## PHP的常用字符串函数
 **字符串(或者变量是字符串)之间以小数点辅以空格连接**
 `echo "<br/>";`换行
@@ -337,6 +342,8 @@ if ($query->num_rows == 0) { //1
     `int` 整形数字
     `varchar` 字符串
     `decimal` 浮点(小数点)数字,设置格式为(自定义数位,自定义小数点数位)
+    `key` 索引
+    `primary key` 主键
 * 二、建立表格:
     ```
     CREATE TABLE `表名` (
