@@ -113,6 +113,14 @@ class AccountController extends Controller {
     {$之前于本标签内自定义的变量.id}:{$之前于本标签内自定义的变量.name}
 </foreach>
 ```
+`elseif`的使用方法
+```
+<if condition="今天天晴"> value1
+<elseif condition="今天多云"/>value2
+<else /> value3
+</if>
+```
+
 
 ## 项目开发
 
