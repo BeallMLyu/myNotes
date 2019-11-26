@@ -10,7 +10,8 @@
 </head>
 <body class="markdown haroopad">
 <h1 id="html基本速成"><a name="html基本速成" href="#html基本速成"></a>html基本速成</h1><ul>
-<li>一:全世界所有网页的开头<br>  <code>&lt;!DOCTYPE html&gt;</code></li><li>二:开发环境<br>  <code>PHP Study</code>&amp;<code>PHP Strom</code></li><li>html基本语法<pre><code data-origin="<pre><code>  &amp;lt;html&amp;gt;
+<li>一:全世界所有网页的开头<br>  <code>&lt;!DOCTYPE html&gt;</code></li><li>二:开发环境<br>  <code>PHP Study</code>&amp;<code>PHP Strom</code></li><li><p>html基本语法</p>
+<pre><code data-origin="<pre><code>  &amp;lt;html&amp;gt;
       &amp;lt;head&amp;gt;
           &amp;lt;title&amp;gt;
           (This is first word)
@@ -36,7 +37,8 @@
   &lt;/html&gt;
   &lt;style&gt;&amp;&lt;/style&gt;可以用在任何地方，多在head&amp;body里面.
   页面主体
-</code></pre><h1 id="css展现网页样式的语法基础"><a name="css展现网页样式的语法基础" href="#css展现网页样式的语法基础"></a>CSS展现网页样式的语法基础</h1>
+</code></pre></li><li><p>引入JQuery代码:<code>&lt;script src="https://cdn.bootcss.com/jquery/1.9.0/jquery.js"&gt;&lt;/script&gt;</code></p>
+<h1 id="css展现网页样式的语法基础"><a name="css展现网页样式的语法基础" href="#css展现网页样式的语法基础"></a>CSS展现网页样式的语法基础</h1>
 </li><li>一、基本语法<ul>
 <li>1.只有<code>&lt;a&gt;</code>内部的href属性（也只有<code>&lt;a&gt;</code>标签有）之后的网址才能超链接。</li><li>2.<code>Target=”_blank”</code> 这是在以<code>href</code>为基准输入的网址加空格后的属性，作用是将网址在另一个网页打开。但是<code>_parent</code> 是将网页以父页面中打开。</li><li>3.<code>Link</code> 标签，把样式引用进网页里面</li><li>4.<code>Style</code> 一共三种，类以·（点）开头，ID以#开头，标签就是以<code>a</code>,<code>b</code>,<code>html</code>,<code>title</code>,<code>body</code>,<code>div</code>,<code>button</code>等标签名开头。</li><li>5.<code>label</code> 作用和div差不多,标签内通常配合for使用</li><li>6.<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> 最大号-最小号标题,数字越大字体越小</li><li>7.<code>http://localhost/login.html</code> 手动打开本地html的方式,和打开PHP的方式类似</li></ul>
 </li><li>二、标签的类定义<ul>
@@ -61,9 +63,31 @@ Background-Image,用于style中，这样的方式基本用于背景。
 </code></pre></li></ul>
 </li><li>五、标签<ul>
 <li>1.<code>&lt;form&gt;&lt;/form&gt;</code><ul>
-<li>1.<code>&lt;form&gt;&lt;/form&gt;</code> 由多个元素或组件组合成的表单</li><li>2.<code>&lt;input&gt;</code> 用户输入各种信息的地方(这个比较特殊,不用靠打斜杠结束，打不打按个人习惯)</li><li>3.method:选择以POST或者GET的方式提交</li><li>4.type:属性</li><li>5.text:无功能性输入</li><li>6.radio:单选项</li><li>7.password:密码处理</li><li>8.checkbox:多选项</li><li>9.submit:提交按钮</li><li>10.Placeholder:目标输入框中默认的占位语句</li><li>11.name:标识目标输入框提交后的索引</li><li><strong>以上至input部分的语句只能存在于input标签内</strong> </li><li>12.<code>&lt;br/&gt;</code>:换行</li><li>13.<code>&lt;from action=””&gt;&lt;/from&gt;</code>行动跳转，如果是已经存在的网页就打开，如果是图片，音乐，应用安装包等文件就是下载。但一般用于前者。</li><li>14.<pre><code data-origin="<pre><code>&amp;lt;button type=&quot;button&quot;&amp;gt;Hi,LookHere Bro.&amp;lt;/button&amp;gt;
+<li>1.<code>&lt;form&gt;&lt;/form&gt;</code> 由多个元素或组件组合成的表单</li><li>2.<code>&lt;input&gt;</code> 用户输入各种信息的地方(这个比较特殊,不用靠打斜杠结束，打不打按个人习惯)</li><li>3.<code>method</code>:选择以POST或者GET的方式提交</li><li>4.<code>type</code>:属性</li><li>5.<code>text</code>:无功能性输入</li><li>6.<code>radio</code>:单选项</li><li>7.<code>password</code>:密码处理</li><li>8.<code>checkbox</code>:多选项</li><li>9.<code>submit</code>:提交按钮</li><li>10.<code>Placeholder</code>:目标输入框中默认的占位语句</li><li>11.<code>name</code>:标识目标输入框提交后的索引</li><li>12.<code>checked</code>:选中,如未选中则值为空</li><li><strong>以上至input部分的语句只能存在于input标签内</strong></li><li>12.<code>&lt;br/&gt;</code>:换行</li><li>13.<code>&lt;from action=””&gt;&lt;/from&gt;</code>行动跳转，如果是已经存在的网页就打开，如果是图片，音乐，应用安装包等文件就是下载。但一般用于前者。</li><li>14.<pre><code data-origin="<pre><code>&amp;lt;button type=&quot;button&quot;&amp;gt;Hi,LookHere Bro.&amp;lt;/button&amp;gt;
 </code></pre>">&lt;button type="button"&gt;Hi,LookHere Bro.&lt;/button&gt;
-</code></pre>↑按钮标签，可以嵌进a标签</li></ul>
+</code></pre>↑按钮标签，可以嵌进a标签</li><li><ol>
+<li><code>&lt;table&gt;</code>:简单的HTML表格的标签，比如:<pre><code data-origin="<pre><code>&amp;lt;table border=&quot;1&quot;&amp;gt;
+&amp;lt;tr&amp;gt;
+  &amp;lt;th&amp;gt;Month&amp;lt;/th&amp;gt;
+  &amp;lt;th&amp;gt;Savings&amp;lt;/th&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+  &amp;lt;td&amp;gt;January&amp;lt;/td&amp;gt;
+  &amp;lt;td&amp;gt;$100&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;
+</code></pre>">&lt;table border="1"&gt;
+&lt;tr&gt;
+  &lt;th&gt;Month&lt;/th&gt;
+  &lt;th&gt;Savings&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;January&lt;/td&gt;
+  &lt;td&gt;$100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre></li></ol>
+</li></ul>
 </li><li>2.Dom属性（元素），相当于标签</li><li>3.Script标签：内容就是跟用户交互，比如特效之类的显示用途的JavaScript功能。</li></ul>
 </li><li>六,基本键位(组合)<ul>
 <li><code>ctrl+f</code>:注释选中的句子</li><li><code>ctrl+d</code>:选中整行句子</li><li><code>F12</code>:在网页中快速打开调试模式(<strong>chrome&amp;firefox</strong>)</li></ul>
@@ -138,11 +162,17 @@ Function 某个可自定义函数名(参数名1, 参数名2,…etc) {
 <ul>
 <li>addClass:给JQuery选择器所选择的Dom元素加上样式。<br><strong>例子:</strong><pre><code data-origin="<pre><code>$(“#sth”).addClass(“在style中设定好的样式名称,不用加小数点”)
 </code></pre>">$(“#sth”).addClass(“在style中设定好的样式名称,不用加小数点”)
-</code></pre></li><li>siblings: 获得JQuery选择器所选择的DOM元素的同辈元素的集合。<br><strong>例子:</strong><pre><code data-origin="<pre><code>$(“#sth”).siblings()
+</code></pre></li><li><p>siblings: 获得JQuery选择器所选择的DOM元素的同辈元素的集合。<br><strong>例子:</strong></p>
+<pre><code data-origin="<pre><code>$(“#sth”).siblings()
 </code></pre>">$(“#sth”).siblings()
-</code></pre></li><li>removeClass:从所有匹配的元素中删除全部或者指定的类。<br><strong>例子:</strong><pre><code data-origin="<pre><code>$(“#sth”).removeClass(“在style中设定好的样式名称,不用加小数        点”)
+</code></pre></li><li><p>attr():获得DOM元素上对应属性的值</p>
+<pre><code data-origin="<pre><code>.attr('data-id');
+</code></pre>">.attr('data-id');
+</code></pre></li><li><p>removeClass:从所有匹配的元素中删除全部或者指定的类。<br><strong>例子:</strong></p>
+<pre><code data-origin="<pre><code>$(“#sth”).removeClass(“在style中设定好的样式名称,不用加小数        点”)
 </code></pre>">$(“#sth”).removeClass(“在style中设定好的样式名称,不用加小数        点”)
-</code></pre><strong>附: 在style中设定好的样式名称格式和其具体使用方法:</strong><pre><code data-origin="<pre><code>.redBackground{
+</code></pre><p><strong>附: 在style中设定好的样式名称格式和其具体使用方法:</strong></p>
+<pre><code data-origin="<pre><code>.redBackground{
 background: red;
 }
 </code></pre>">.redBackground{

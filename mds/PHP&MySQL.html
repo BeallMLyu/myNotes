@@ -12,14 +12,15 @@
 <h1 id="php语法"><a name="php语法" href="#php语法"></a>PHP语法</h1><ul>
 <li><code>$query-&gt;num_rows</code>:获取数据集中某个某个数据的行数<h2 id="php语言格式:"><a name="php语言格式:" href="#php语言格式:"></a>PHP语言格式:</h2>
 <ul>
-<li>PHP文件必须<code>&lt;?php</code>开头</li><li>每行代码必须以<code>;</code>结束,<code>if</code>等有固定格式的除外</li><li><code>echo</code> 输出字符串<ul>
+<li>PHP文件必须<code>&lt;?php</code>开头</li><li>每行代码必须以<code>;</code>结束,<code>if</code>等有固定格式的除外</li><li><code>.</code>两个不同的字符串或者变量连在一起</li><li><code>echo</code> 输出字符串<ul>
 <li>PHP变量定义及使用方式:<pre><code data-origin="<pre><code>$preCure = “hanaNono”;
 echo $preCure;
 </code></pre>">$preCure = “hanaNono”;
 echo $preCure;
 </code></pre></li></ul>
 </li></ul>
-</li></ul><h2 id="php的常用字符串函数"><a name="php的常用字符串函数" href="#php的常用字符串函数"></a>PHP的常用字符串函数</h2><p><strong>字符串(或者变量是字符串)之间以小数点辅以空格连接</strong><br><code>echo "&lt;br/&gt;";</code>换行<br><code>echo strlen(美分符开头的变量名);</code>字符串长度计算<br><code>echo substr($str, 0, 5);</code>字符串截取(开头是变量名,中间是开始位置,最后是截取长度)<br><code>echo strpos($str, "world");</code>搜索字符串起始位置(变量名,所要搜索的字符串)<br><code>explode(" ", $str);</code>把字符串按分割符 分割成数组<br><code>var_dump( explode(" ", $str) );</code>打印数组和字符串的内容并显示其长度和类型<br><code>echo substr($lauguage, 0, strpos($lauguage, $search));</code>截取某段字符串之前的值<br><code>$message = array();</code>定义空数组<br><code>$php1 = count($php12);</code>数组长度<br><code>$message = array("username" =&gt; "wasl", "age" =&gt; 18, "sexy" =&gt; "Male");</code>键名自定义数组<br><code>echo $arr2["username"];</code>输出数组对应的键名的值<br><code>array_push($numArray, 7);</code>向对应数组的末尾推入一个值<br><code>$pop = array_pop($numArray);</code>把指定数组的最后一位推出并赋值于指定变量<br><code>$mes["age"] = 20;</code>给数组中直接给新添加的索引赋值<br><code>$lan = implode(" ", $lan);</code>把数组按指定分割符合并成字符串</p><pre><code data-origin="<pre><code>if (!$boolean) {
+</li></ul><h2 id="数据库建立:"><a name="数据库建立:" href="#数据库建立:"></a>数据库建立:</h2><ul>
+<li>1.基字符集:utf8</li><li>2.数据库排序规则:utf8_general_ci</li></ul><h2 id="php的常用字符串函数"><a name="php的常用字符串函数" href="#php的常用字符串函数"></a>PHP的常用字符串函数</h2><p><strong>字符串(或者变量是字符串)之间以小数点辅以空格连接</strong><br><code>echo "&lt;br/&gt;";</code>换行<br><code>echo strlen(美分符开头的变量名);</code>字符串长度计算<br><code>echo substr($str, 0, 5);</code>字符串截取(开头是变量名,中间是开始位置,最后是截取长度)<br><code>echo strpos($str, "world");</code>搜索字符串起始位置(变量名,所要搜索的字符串)<br><code>$自定义变量名 = explode(" ", $str);</code>把字符串按分割符 分割成数组<br><code>var_dump( explode(" ", $str) );</code>打印数组和字符串的内容并显示其长度和类型<br><code>echo substr($lauguage, 0, strpos($lauguage, $search));</code>截取某段字符串之前的值<br><code>$message = array();</code>定义空数组<br><code>$php1 = count($php12);</code>数组长度<br><code>$message = array("username" =&gt; "wasl", "age" =&gt; 18, "sexy" =&gt; "Male");</code>键名自定义数组<br><code>echo $arr2["username"];</code>输出数组对应的键名的值<br><code>array_push($numArray, 7);</code>向对应数组的末尾推入一个值<br><code>$pop = array_pop($numArray);</code>把指定数组的最后一位推出并赋值于指定变量<br><code>$mes["age"] = 20;</code>给数组中直接给新添加的索引赋值<br><code>$lan = implode(" ", $lan);</code>把数组按指定分割符合并成字符串</p><pre><code data-origin="<pre><code>if (!$boolean) {
     echo 1;
 } else {
     echo 0;
@@ -365,7 +366,7 @@ $query = mysqli_query($connect, $search);(执行连接和搜索)
 }
 </code></pre></li></ul>
 </li></ul><h1 id="mysql数据库"><a name="mysql数据库" href="#mysql数据库"></a>MySQL数据库</h1><ul>
-<li>一、基本语法:<br>  <code>F9</code> 运行SQL代码的键位<br>  <code>CREATE DATABASE “数据库名”;</code> 创建并命名一个新数据库<br>  <code>DROP DATABASE “数据库名”</code>;卸载目标数据库<br>  <code>DROP TABLE</code> <code>表名</code>;删除目标表<br>  <code>Now()</code> 在表中表现现在的时间</li><li>二、建立表格:<pre><code data-origin="<pre><code>  CREATE TABLE `表名` (
+<li>一、基本语法:<br>  <code>F9</code> 运行SQL代码的键位<br>  <code>CREATE DATABASE “数据库名”;</code> 创建并命名一个新数据库<br>  <code>DROP DATABASE “数据库名”</code>;卸载目标数据库<br>  <code>DROP TABLE</code> <code>表名</code>;删除目标表<br>  <code>Now()</code> 在表中表现现在的时间<br>  <code>int</code> 整形数字<br>  <code>varchar</code> 字符串<br>  <code>decimal</code> 浮点(小数点)数字,设置格式为(自定义数位,自定义小数点数位)<br>  <code>key</code> 索引<br>  <code>primary key</code> 主键</li><li>二、建立表格:<pre><code data-origin="<pre><code>  CREATE TABLE `表名` (
     `id` INT(11) NOT NULL AUTO_INCREMENT,
     `username` VARCHAR(20) NOT NULL COMMENT '用户名',
     `password` VARCHAR(32) NOT NULL COMMENT '密码',
@@ -401,7 +402,7 @@ $query = mysqli_query($connect, $search);(执行连接和搜索)
   ('howlongmybaby','15kilimetersss','2019-06-03 10:20:35','2019-06-03 10:21:16');
 </code></pre></li><li><p>四、对已存在数据的处理方式:</p>
 <ul>
-<li>最基本查询方式:<pre><code data-origin="<pre><code>SELECT *(星号仅用于表内所有字段)或者`表内指定类名`  FROM `表名` WHERE `id` = 3;
+<li>最基本查询方式(如果是查询多个字段,以逗号隔开):<pre><code data-origin="<pre><code>SELECT *(星号仅用于表内所有字段)或者`表内指定类名`  FROM `表名` WHERE `id` = 3;
 </code></pre>">SELECT *(星号仅用于表内所有字段)或者`表内指定类名`  FROM `表名` WHERE `id` = 3;
 </code></pre></li><li>表内数据删除方式:<pre><code data-origin="<pre><code>DELETE FROM `users` WHERE `id` &amp;lt;&amp;gt; 2;
 </code></pre>">DELETE FROM `users` WHERE `id` &lt;&gt; 2;
@@ -430,7 +431,8 @@ $query = mysqli_query($connect, $search);(执行连接和搜索)
 </code></pre>">SELECT * FROM `users` LEFT(RIGHT) JOIN `users_info` ON `主表`.`id` = `次表`.`此表的关联id`(位置调换);
 </code></pre><p><strong>(“=” 等于<br>“&gt;” 大于<br>“&lt;” 小于<br>“&gt;=” 大于等于<br>“&lt;=” 小于等于<br>“&lt;&gt;” 不等于<br>)</strong></p>
 </li></ul>
-</li></ul>
+</li></ul><h2 id="php算法"><a name="php算法" href="#php算法"></a>PHP算法</h2><ul>
+<li><code>ceil</code>:向上取整(如6.1~6.9都能算成7)</li><li><code>round</code>:纯四舍五入</li></ul>
 
 <footer style="position:fixed; font-size:.8em; text-align:right; bottom:0px; margin-left:-25px; height:20px; width:100%;">generated by <a href="http://pad.haroopress.com" target="_blank">haroopad</a></footer>
 </body>
