@@ -123,6 +123,33 @@ class AccountController extends Controller {
 </if>
 ```
 
+* 逻辑-退出登录的例子:
+```
+public function log_out() {
+        session(null);//session内缓存的信息清空
+        $this->redirect('Login/login');//跳转到退出登陆后的指定网页
+    }
+```
+
+* 未登录之前只能跳转指定网页的逻辑(要使此逻辑能够使用将用到接下来介绍的'控制器继承'):
+```
+public function _initialize() {
+        $users = session('users');//以赋值的方式取出session内键名为'users'的值
+        if (!$users) {//如果没有取出此值
+            $this->redirect('Login/login');//只能跳转指定网页
+        }
+    }
+```
+
+* 控制器继承:
+
+```
+namespace(命名空间,即你给这个控制器起名的地方) Admin\Controller;
+
+use(所使用框架) Think\Controller;
+
+class(本控制器名字) CommonController extends(要继承的控制器) Controller(在Controller前写上你所要继承的控制器的名字) {}
+```
 
 ## 项目开发
 
